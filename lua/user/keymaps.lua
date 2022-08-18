@@ -10,6 +10,8 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+keymap("c", "km", ":e ~/.config/nvim/lua/user/keymaps.lua<CR>", opts)
+
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -17,7 +19,6 @@ vim.g.maplocalleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
-
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -69,3 +70,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- nvim-tree
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
+
+-- formatar
+-- keymap("n", "<S-f>", ":lua vim.lsp")
